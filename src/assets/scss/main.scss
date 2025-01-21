@@ -1,0 +1,191 @@
+@use 'header.scss';
+@use 'mainsection.scss';
+@use 'projectsection.scss';
+@use 'selfportrait.scss';
+@use 'footer.scss';
+@use 'legalMentions.scss';
+@use 'SlickCarousel.scss';
+@use 'weddings.scss';
+@use 'renderGallery.scss';
+@use "slick-carousel/slick/slick.css";
+@use "slick-carousel/slick/slick-theme.css";
+
+@font-face {
+  font-family: 'Josefin';
+  src: url('../fonts/JosefinSans.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Garamond-Regular';
+  src: url('../fonts/Garamond-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Didot-Regular';
+  src: url('../fonts/Didot-Regular.ttf') format('truetype');
+}
+@media (min-width: 280px) {
+}
+@media (min-width: 320px) {
+}
+@media (min-width: 375px) {
+}
+@media (min-width: 600px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1024px) {
+}
+@media (min-width: 1280px) {
+}
+@media (min-width: 1440px) {
+}
+
+// fonts
+
+$titre: 'Didot-Regular', serif;
+$text: 'Garamond-Regular', serif;
+$text-jo: 'Josefin', sans-serif;
+
+// colors
+// couleurs de base
+//$light-blue: #C7D5D8;
+//$dark-blue: #3F4851;
+//$light-blue: #fafff2;
+//$dark-blue: #161915;
+// garder ces couleurs
+$light-blue: #EDF4FA;
+$dark-blue: #0C1217;
+$white: #FFFFFF;
+$black: #000000;
+
+// font weight
+
+$weight: 500;
+
+// font style
+
+$style: normal;
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+* {
+  //font-family: $text-jo;
+  // font-weight: $weight;
+  margin: 0;
+  padding: 0;
+  background-color: $light-blue;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  transition: transform 1s cubic-bezier(.16,1.08,.83,1);
+  &:hover {
+    transform: rotate(360deg);
+  }
+}
+
+.modal {
+
+}
+
+h1 {
+  font-family: $text-jo;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3rem;
+  background-color: transparent;
+  //text-transform: uppercase;
+  @media (min-width: 280px) {
+    font-size: 2rem;
+  }
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
+}
+
+h2, h3, h4, h5 {
+  font-family: $text-jo;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3rem;
+  background-color: transparent;
+  //text-transform: uppercase;
+  @media (min-width: 280px) {
+    font-size: 2rem;
+  }
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
+}
+
+p, h6, #header, nav, ul, li, a, svg, img, .logo, div, section {
+  background-color: transparent;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.bg-black {
+  background-color: $black;
+  color: $white;
+  .footer__info {
+    &__title {
+      &:after {
+        background-color: $white;
+      }
+    }
+    &__contact {
+      &:after {
+        background-color: $white;
+      }
+      &__number {
+        &__phone {
+          a {
+            color: $white;
+          }
+        }
+        &__line {
+          background-color: $white;
+        }
+        &__mail {
+          a {
+            color: $white;
+          }
+        }
+      }
+    }
+    &__social {
+      &__link {
+        &__insta {
+          color: $white;
+          &:before {
+            background-color: $white;
+          }
+        }
+        &__behance {
+          color: $white;
+          &:before {
+            background-color: $white;
+          }
+        }
+      }
+    }
+    &__rights {
+      &__a {
+        color: $white;
+      }
+    }
+  }
+}

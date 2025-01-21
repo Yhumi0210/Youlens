@@ -1,0 +1,270 @@
+@font-face {
+  font-family: 'Josefin';
+  src: url('../fonts/JosefinSans.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Garamond-Regular';
+  src: url('../fonts/Garamond-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Didot-Regular';
+  src: url('../fonts/Didot-Regular.ttf') format('truetype');
+}
+
+// fonts
+
+$titre: 'Didot-Regular', serif;
+$text: 'Garamond-Regular', serif;
+$text-jo: 'Josefin', sans-serif;
+
+// colors
+
+//$light-blue: #fafff2;
+//$dark-blue: #161915;
+$light-blue: #EDF4FA;
+$dark-blue: #0C1217;
+$white: #FFFFFF;
+
+// font weight
+
+$weight: 500;
+
+// font size
+
+@media (min-width: 280px) {
+}
+@media (min-width: 375px) {
+}
+@media (min-width: 600px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1024px) {
+}
+@media (min-width: 1280px) {
+}
+@media (min-width: 1440px) {
+}
+
+// font style
+
+$style: normal;
+
+.footer {
+  background-color: $light-blue;
+  color: $dark-blue;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 8rem 2rem 8rem;
+  @media (min-width: 280px) {
+    padding: 1rem;
+  }
+  @media (min-width: 600px) {
+    padding: 2rem 1rem 2rem 1rem;
+  }
+  @media (min-width: 992px) {
+    padding: 2rem 6rem 2rem 6rem;
+  }
+  @media (min-width: 1280px) {
+    padding: 2rem 8rem 2rem 8rem;
+  }
+  &__container {
+    align-self: flex-end;
+    margin: 0 -6rem 2rem 0;
+    cursor: pointer;
+    @media (min-width: 280px) {
+      padding: 0;
+      margin: 0;
+    }
+    @media (min-width: 992px) {
+      margin: 0 -4rem 0 0;
+    }
+    @media (min-width: 1280px) {
+      margin: 0 -6rem 0 0;
+    }
+    @media (min-width: 1440px) {
+      margin: 0 -6rem 0 0;
+    }
+  }
+  &__info {
+    &__title {
+      &:after {
+        content: "";
+        display: block;
+        background-color: $dark-blue;
+        width: 100%;
+        height: 2px;
+        margin: 0.5rem 0 0.8rem 0;
+      }
+    }
+    &__contact {
+      &:after {
+        content: "";
+        display: block;
+        background-color: $dark-blue;
+        width: 100%;
+        height: 2px;
+        margin: 0.7rem 0 0.8rem 0;
+      }
+      &__number {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        @media (min-width: 280px) {
+          flex-direction: column;
+        }
+        @media (min-width: 768px) {
+          flex-direction: row;
+        }
+        &__phone {
+          width: 32rem;
+          font-family: $text;
+          font-optical-sizing: auto;
+          font-weight: 300;
+          font-style: normal;
+          font-size: 1.5rem;
+          @media (min-width: 280px) {
+            width: 100%;
+          }
+          a {
+            text-decoration: none;
+            list-style-type: none;
+            color: $dark-blue;
+          }
+        }
+        &__line {
+          display: block;
+          background-color: $dark-blue;
+          height: 1.5rem;
+          width: 2px;
+          @media (min-width: 280px) {
+            margin: 0.8rem 0;
+            height: 2px;
+            width: 100%;
+          }
+          @media (min-width: 768px) {
+            margin: 0;
+            height: 1.5rem;
+            width: 3px;
+          }
+        }
+        &__mail {
+          width: 32rem;
+          font-family: $text;
+          font-optical-sizing: auto;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 1.5rem;
+          text-align: end;
+          @media (min-width: 280px) {
+            width: 100%;
+            text-align: left;
+          }
+          @media (min-width: 320px) {
+            width: 100%;
+            text-align: left;
+          }
+          @media (min-width: 768px) {
+            width: 100%;
+            text-align: end;
+          }
+          a {
+            text-decoration: none;
+            list-style-type: none;
+            color: $dark-blue;
+            @media (min-width: 280px) {
+              font-size: 1.3rem;
+            }
+            @media (min-width: 308px) {
+              font-size: 1.4rem;
+            }
+            @media (min-width: 600px) {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+    &__social {
+      margin-bottom: 4rem;
+      &__link {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &__insta {
+          font-family: $text;
+          font-optical-sizing: auto;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 1.5rem;
+          text-decoration: none;
+          color: $dark-blue;
+          position: relative;
+          &:before {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: $dark-blue;
+            transition: width 280ms ease-in-out;
+          }
+          &:hover:before{
+            width: 100%;
+          }
+        }
+        &__behance {
+          font-family: $text;
+          font-optical-sizing: auto;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 1.5rem;
+          text-decoration: none;
+          color: $dark-blue;
+          position: relative;
+          &:before {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            width: 0%;
+            height: 2px;
+            background-color: $dark-blue;
+            transition: width 280ms ease-in-out;
+          }
+          &:hover:before{
+            width: 100%;
+          }
+        }
+      }
+    }
+    &__rights {
+      font-family: $text;
+      font-optical-sizing: auto;
+      font-style: normal;
+      font-weight: 300;
+      text-align: center;
+      font-size: 1rem;
+      @media (min-width: 280px) {
+        font-size: 1.15rem;
+      }
+      @media (min-width: 600px) {
+        font-size: 1.3rem;
+      }
+      @media (min-width: 1440px) {
+        font-size: 1rem;
+      }
+      a {
+        text-decoration: none;
+        list-style-type: none;
+        color: $dark-blue;
+      }
+    }
+  }
+}

@@ -1,0 +1,613 @@
+@font-face {
+  font-family: 'Magazine';
+  src: url('../fonts/Magazine.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Magazine-Bold';
+  src: url('../fonts/Magazine-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('../fonts/Quicksand_Book.otf') format('opentype');
+}
+
+// fonts
+
+$titre: 'Magazine-Bold', serif;
+$titre-thin: 'Magazine', serif;
+$text: 'Quicksand', sans-serif;
+
+// colors
+$black: #000000;
+$light-blue: #EDF4FA;
+$dark-blue: #0C1217;
+$white: #FFFFFF;
+
+.modal {
+  font-family: $text;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.nav__wedding {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  list-style-type: none;
+  letter-spacing: 0.15rem;
+  cursor: pointer;
+  @media (min-width: 992px) {
+    width: 50rem;
+  }
+  @media (min-width: 1280px) {
+    width: 60rem;
+  }
+  @media (min-width: 1440px) {
+    width: 70rem;
+  }
+  @media (min-width: 1920px) {
+    width: 90rem;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    height: 15rem;
+    margin-left: 2rem;
+    margin-top: 4rem;
+    text-align: left;
+  }
+  &__page {
+    text-transform: uppercase;
+    position: relative;
+    text-decoration: none;
+    color: $light-blue;
+    font-size: 1.2rem;
+    text-align: center;
+    text-shadow: $dark-blue 2px 2px 2px;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      bottom: -0.3rem;
+      width: 0;
+      height: 2px;
+      background-color: $light-blue;
+      transition: width 300ms ease, left 300ms ease, right 300ms ease;
+    }
+    &:before {
+      left: 50%;
+      right: 50%;
+      transition-delay: 100ms;
+      box-shadow: $dark-blue 2px 2px 5px;
+    }
+
+    &:after {
+      left: 50%;
+      right: 50%;
+      transition-delay: 100ms;
+      box-shadow: $dark-blue 2px 2px 5px;
+    }
+    &:hover:before, &:hover:after {
+      width: 100%;
+      left: 0;
+      right: 0;
+      box-shadow: $dark-blue 2px 2px 5px;
+    }
+  }
+}
+
+.weddings {
+  &__hero {
+    margin: -4.22rem 0 0 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -7rem 0 4rem 0;
+    z-index: 1;
+    font-family: $titre;
+    color: $white;
+    text-shadow: #0000004C 1px 1px 2px;
+    @media (min-width: 280px) {
+      margin: -5rem 0 2rem 0;
+    }
+    @media (min-width: 320px) {
+    }
+    @media (min-width: 375px) {
+      margin: -7rem 0 4rem 0;
+    }
+    @media (min-width: 600px) {
+      margin: -14rem 0 11rem 0;
+      font-size: 2rem;
+    }
+    @media (min-width: 768px) {
+      margin: -18rem 0 14rem 0;
+      font-size: 3rem;
+    }
+    @media (min-width: 992px) {
+      margin: -22rem 0 17rem 0;
+      font-size: 3.5rem;
+    }
+    @media (min-width: 1024px) {
+      margin: -24rem 0 18rem 0;
+      font-size: 3.5rem;
+    }
+    @media (min-width: 1280px) {
+      margin: -29rem 0 22rem 0;
+      font-size: 4.5rem;
+    }
+    @media (min-width: 1440px) {
+      margin: -33rem 0 25rem 0;
+      font-size: 5.5rem;
+    }
+    @media (min-width: 1920px) {
+      margin: -43rem 0 32rem 0;
+      font-size: 7rem;
+    }
+    &__span {
+      font-family: $titre-thin;
+      font-size: 1.3rem;
+      background-color: transparent;
+      @media (min-width: 600px) {
+        font-size: 1.5rem;
+      }
+      @media (min-width: 768px) {
+        font-size: 2rem;
+      }
+      @media (min-width: 992px) {
+        font-size: 2.5rem;
+      }
+      @media (min-width: 1024px) {
+        font-size: 3rem;
+      }
+      @media (min-width: 1280px) {
+        font-size: 3.5rem;
+      }
+      @media (min-width: 1440px) {
+        font-size: 4rem;
+      }
+      @media (min-width: 1920px) {
+        font-size: 5rem;
+      }
+    }
+  }
+}
+.story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0 1rem -1rem;
+  &__votre {
+    font-family: $text;
+    margin: 0 0 0 -6rem;
+    font-size: 1.5rem;
+    @media (min-width: 600px) {
+      font-size: 2.5rem;
+    }
+    @media (min-width: 768px) {
+      font-size: 3rem;
+    }
+    @media (min-width: 992px) {
+      font-size: 4rem;
+    }
+    @media (min-width: 1280px) {
+      font-size: 4rem;
+    }
+    @media (min-width: 1440px) {
+      font-size: 5rem;
+    }
+    @media (min-width: 1920px) {
+      font-size: 4rem;
+      margin: 0 0 0 -13rem;
+    }
+  }
+    &__your {
+      font-family: $titre;
+      margin: 0 0 0 -2rem;
+      font-size: 2.5rem;
+      @media (min-width: 600px) {
+        font-size: 3.5rem;
+        margin: 0 0 0 -0.5rem;
+      }
+      @media (min-width: 768px) {
+        font-size: 4rem;
+        margin: 0 0 0 0;
+      }
+      @media (min-width: 992px) {
+        font-size: 5rem;
+        margin: 0 0 0 1rem;
+      }
+      @media (min-width: 1280px) {
+        font-size: 5rem;
+        margin: 0 0 0 1rem;
+      }
+      @media (min-width: 1440px) {
+        font-size: 6rem;
+        margin: 0 0 0 2rem;
+      }
+      @media (min-width: 1920px) {
+        font-size: 7rem;
+        margin: -0.6rem 0 0 0;
+      }
+    }
+    &__histoire {
+      font-family: $text;
+      margin: -0.7rem 0 0 2rem;
+      font-size: 1.5rem;
+      @media (min-width: 600px) {
+        font-size: 2.5rem;
+        margin: -1rem 0 0 5rem;
+      }
+      @media (min-width: 768px) {
+        font-size: 3rem;
+        margin: -1rem 0 0 7rem;
+      }
+      @media (min-width: 992px) {
+        font-size: 4rem;
+        margin: -1.5rem 0 0 12rem;
+      }
+      @media (min-width: 1280px) {
+        font-size: 4rem;
+        margin: -1.5rem 0 0 12rem;
+      }
+      @media (min-width: 1440px) {
+        font-size: 5rem;
+        margin: -1.5rem 0 0 14rem;
+      }
+      @media (min-width: 1920px) {
+        font-size: 4rem;
+        margin: -2rem 0 0 8rem;
+      }
+    }
+    &__story {
+      font-family: $titre;
+      margin: 0 0 0 7rem;
+      font-size: 2.5rem;
+      @media (min-width: 600px) {
+        font-size: 3.5rem;
+        margin: 0 0 0 11rem;
+      }
+      @media (min-width: 768px) {
+        font-size: 4rem;
+        margin: 0 0 0 15rem;
+      }
+      @media (min-width: 992px) {
+        font-size: 5rem;
+        margin: 0 0 0 20rem;
+      }
+      @media (min-width: 1280px) {
+        font-size: 5rem;
+        margin: 0 0 0 20rem;
+      }
+      @media (min-width: 1440px) {
+        font-size: 6rem;
+        margin: 0 0 0 24rem;
+      }
+      @media (min-width: 1920px) {
+        font-size: 7rem;
+        margin: -0.5rem 0 0 24rem;
+      }
+    }
+}
+.presents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 2rem 0;
+  @media (min-width: 992px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 2rem 2rem 2rem;
+    gap: 2rem;
+  }
+  @media (min-width: 1280px) {
+    margin: 0 8rem 8rem 8rem;
+    gap: 6rem;
+  }
+  @media (min-width: 1920px) {
+    margin: 0 10rem 10rem 10rem;
+    gap: 6rem;
+  }
+  &__text {
+    margin: 0 2rem 2rem 2rem;
+    font-family: $text;
+    font-size: 1.2rem;
+    text-align: justify;
+    @media (min-width: 992px) {
+      margin: 0;
+    }
+    @media (min-width: 1280px) {
+      font-size: 1.3rem;
+    }
+  }
+  &__img {
+    width: 100%;
+    @media (min-width: 1440px) {
+      width: 80%;
+      margin: 0 auto;
+    }
+    @media (min-width: 1920px) {
+      width: 60%;
+      margin: 0 auto;
+    }
+  }
+}
+.filmography {
+  &__title {
+    color: $white;
+    background-color: $black;
+    font-family: $titre-thin;
+    padding: 2rem 0 2rem 2rem;
+    font-size: 2rem;
+    @media (min-width: 600px) {
+      font-size: 2rem;
+      padding: 3rem 0 3rem 2rem;
+    }
+    @media (min-width: 768px) {
+      font-size: 3rem;
+    }
+    @media (min-width: 992px) {
+      font-size: 3.5rem;
+    }
+    @media (min-width: 1280px) {
+      font-size: 4.5rem;
+      padding: 4rem 0 4rem 2rem;
+    }
+    @media (min-width: 1440px) {
+      font-size: 5.5rem;
+    }
+    @media (min-width: 1920px) {
+      font-size: 7rem;
+      padding: 5rem 0 5rem 4rem;
+    }
+  }
+  &__text {
+    margin: 2rem 2rem;
+    text-indent: 2rem;
+    font-family: $text;
+    font-size: 1.2rem;
+    text-align: justify;
+    @media (min-width: 600px) {
+      font-size: 1.2rem;
+      margin: 2rem 7rem;
+    }
+    @media (min-width: 1280px) {
+      font-size: 1.3rem;
+      margin: 2rem 12rem;
+    }
+    @media (min-width: 1440px) {
+      margin: 2rem 18rem;
+    }
+    @media (min-width: 1920px) {
+      font-size: 1.3rem;
+      margin: 2rem 28rem;
+    }
+  }
+  &__events {
+
+    &__videos {
+      position: relative;
+      @media (min-width: 992px) {
+        width: 80%;
+        margin: 0 auto;
+      }
+      @media (min-width: 1280px) {
+        width: 70%;
+        margin: 0 auto;
+      }
+      @media (min-width: 1440px) {
+        width: 51%;
+      }
+      @media (min-width: 1920px) {
+        width: 46.5%;
+      }
+    .arrows {
+      position: absolute;
+      width: 2rem;
+      top: 45%;
+      color: $white;
+      cursor: pointer;
+    }
+    &__arrow-left {
+      left: 1rem;
+    }
+    &__arrow-right {
+      right: 1rem;
+    }
+    &__video {
+      width: 100%;
+    }
+  }
+    &__justmarried {
+      font-family: $text;
+      text-align: center;
+      margin: 2rem 0 1rem 0;
+      font-size: 3rem;
+    }
+    &__commentary {
+      margin: 2rem 2rem;
+      text-indent: 2rem;
+      font-family: $text;
+      font-size: 1.2rem;
+      text-align: justify;
+      @media (min-width: 600px) {
+        font-size: 1.2rem;
+        margin: 2rem 7rem;
+      }
+      @media (min-width: 1280px) {
+        font-size: 1.3rem;
+        margin: 2rem 12rem;
+      }
+      @media (min-width: 1440px) {
+        margin: 2rem 22rem;
+      }
+      @media (min-width: 1920px) {
+        font-size: 1.3rem;
+        margin: 2rem 32rem;
+      }
+    }
+    &__arrows {
+
+    }
+  }
+}
+
+.contact {
+  &__title {
+    font-family: $titre-thin;
+    padding: 2rem 0 2rem 2rem;
+    font-size: 2rem;
+    @media (min-width: 600px) {
+      font-size: 2rem;
+      padding: 3rem 0 3rem 2rem;
+    }
+    @media (min-width: 768px) {
+      font-size: 3rem;
+    }
+    @media (min-width: 992px) {
+      font-size: 3.5rem;
+    }
+    @media (min-width: 1280px) {
+      font-size: 4.5rem;
+      padding: 4rem 0 4rem 2rem;
+    }
+    @media (min-width: 1440px) {
+      font-size: 5.5rem;
+    }
+    @media (min-width: 1920px) {
+      font-size: 7rem;
+      padding: 5rem 0 5rem 4rem;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 2rem;
+    @media (min-width: 768px) {
+      margin: 2rem 7rem;
+    }
+    @media (min-width: 1280px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10rem;
+    }
+    @media (min-width: 1440px) {
+
+    }
+    @media (min-width: 1920px) {
+      margin: 0 10rem 2rem 10rem;
+      gap: 20rem;
+    }
+    &__text {
+      display: flex;
+      flex-direction: column;
+      font-family: $text;
+      font-size: 1.2rem;
+      text-align: justify;
+      text-indent: 2rem;
+      @media (min-width: 1920px) {
+        font-size: 1.3rem;
+      }
+      &__me {
+        text-transform: uppercase;
+        text-align: right;
+        margin: 0 2rem 1.5rem 0;
+      }
+    }
+    &__input {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: space-between;
+      margin: 2rem 0 0 0;
+      font-family: $text;
+      letter-spacing: 0.1rem;
+      @media (min-width: 768px) {
+
+      }
+      @media (min-width: 992px) {
+
+      }
+      @media (min-width: 1280px) {
+
+      }
+      @media (min-width: 1440px) {
+
+      }
+      @media (min-width: 1920px) {
+        font-size: 1.3rem;
+      }
+      label {
+        margin: 1rem 0 0 0;
+      }
+      input {
+        width: 100%;
+        height: 2rem;
+        border: none;
+        border-bottom: 1px solid $black;
+        font-size: 1rem;
+      }
+      .textarea-me {
+        width: 100%;
+        height: 2rem;
+        border: none;
+        border-bottom: 1px solid $black;
+        font-size: 1rem;
+      }
+      textarea {
+        width: 100%;
+        height: 6rem;
+        border: none;
+        border-bottom: 1px solid $black;
+        font-size: 1rem;
+      }
+      button {
+        margin: 2rem 0 0 0;
+        width: 50%;
+        height: 3rem;
+        border: none;
+        border-radius: 4px;
+        background-color: $black;
+        color: $white;
+        font-size: 1rem;
+        cursor: pointer;
+        letter-spacing: 0.1rem;
+      }
+    }
+  }
+  .ref {
+    margin: 0 2rem 2rem 2rem;
+    font-family: $text;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.2rem;
+    text-align: justify;
+    text-indent: 2rem;
+    @media (min-width: 768px) {
+      margin: 2rem 7rem;
+    }
+    @media (min-width: 1280px) {
+      margin: 3rem 7rem;
+    }
+    @media (min-width: 1440px) {
+      margin: 3rem 15rem;
+    }
+    @media (min-width: 1920px) {
+      font-size: 1.3rem;
+      margin: 3rem 15rem;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+src/assets/img
+public/img
+
+# Videos
+
+public/img/video/Youlens_showreel_2023-2024.mp4
+public/img/video/Youlens_showreel_2023-2024___v2.mp4
+public/img/video/Youlens_showreel_2023-2024___v3.mp4
+public/img/video/youlens-wedding.mp4
+
+src/assets/img/video/Youlens_showreel_2023-2024.mp4
+src/assets/img/video/Youlens_showreel_2023-2024___v2.mp4
+src/assets/img/video/Youlens_showreel_2023-2024___v3.mp4
+src/assets/img/video/youlens-wedding.mp4
