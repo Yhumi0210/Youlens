@@ -4,6 +4,9 @@ import {Link, useLocation, useNavigate} from 'react-router-dom'
 import Brand from './Brand'
 import Logo from './Logo'
 import logoclair from '../../assets/img/icons/logoclair.svg'
+import insta from '../../assets/img/icons/insta.svg'
+import { ExternalLink } from './ExternalLink.jsx'
+
 
 export default function Header() {
     const location = useLocation()
@@ -30,21 +33,6 @@ export default function Header() {
     //         section.scrollIntoView({ behavior: 'smooth' })
     //     }
     //     setIsMenuOpen(false)
-    // }
-
-    // const handleScrollToSection = (sectionId) => {
-    //     if (location.pathname !== '/projets') {
-    //         // Redirige vers la page d'accueil avec un hash
-    //         navigate(`/#${sectionId}`);
-    //     } else {
-    //         // Scroll directement si déjà sur la bonne page
-    //         const section = document.getElementById(sectionId);
-    //         if (section) {
-    //             section.scrollIntoView({ behavior: 'smooth' });
-    //         }
-    //     }
-    //
-    //     setIsMenuOpen(false);
     // }
 
     const handleNavigation = (anchor) => {
@@ -108,28 +96,36 @@ export default function Header() {
                                   onClick={() => handleNavigation('contact')}>
                                 contact
                             </Link>
+                            <a href="https://www.instagram.com/youlens__?igsh=NXR6Y3F4ZjJyYjdi"
+                               target="_blank" rel="noreferrer noopener">
+                                <img className='insta' src={insta} alt='logo Instagram'/>
+                            </a>
                         </div>
                     ) : (
                         <div className="nav__wedding">
                             <p className="nav__wedding__page"
-                                  onClick={() => handleNavigation('filmography')}>filmographie</p>
+                               onClick={() => handleNavigation('filmography')}>filmographie</p>
                             <p className="nav__wedding__page"
-                                  onClick={() => handleNavigation('contact-form')}>contact</p>
+                               onClick={() => handleNavigation('contact-form')}>contact</p>
                             <p className="nav__wedding__page"
-                                  onClick={() => handleNavigation('presents')}>
+                               onClick={() => handleNavigation('presents')}>
                                 à propos
                             </p>
                             <Link to="/projets" className="nav__wedding__page" onClick={() => setIsMenuOpen(false)}>
                                 autres projets
                             </Link>
+                            <a href="https://www.instagram.com/youlens__?igsh=NXR6Y3F4ZjJyYjdi"
+                               target="_blank" rel="noreferrer noopener">
+                                <img className='insta' src={insta} alt='logo Instagram'/>
+                            </a>
                         </div>
-            )}
-        </nav>
+                    )}
+            </nav>
             {location.pathname === '/' ? (
                 <Logo path='/projets' logo={logoclair}/>
             ) : (
                 <Logo path='' logo={logoclair}/>
             )}
-</header>
-)
+        </header>
+    )
 }
