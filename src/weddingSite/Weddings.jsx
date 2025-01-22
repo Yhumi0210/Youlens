@@ -9,8 +9,8 @@ export default function Weddings() {
     return (
         <>
             <Helmet>
-                <title>Guillaume Court | Wedding Films | Youlens</title>
-                <link rel="canonical" href="https://youlens.fr/mariages" />
+                <title>Guillaume Court | Vidéaste de mariage | Sud de la France</title>
+                <link rel="canonical" href="https://youlens.fr" />
             </Helmet>
             <div className='weddings'>
                 <video src={videoWedding} className='weddings__hero' autoPlay muted playsInline loop/>

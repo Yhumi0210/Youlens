@@ -5,7 +5,6 @@ import Brand from './Brand'
 import Logo from './Logo'
 import logoclair from '../../assets/img/icons/logoclair.svg'
 import insta from '../../assets/img/icons/insta.svg'
-import { ExternalLink } from './ExternalLink.jsx'
 
 
 export default function Header() {

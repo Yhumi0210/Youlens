@@ -23,8 +23,8 @@ function MainSection() {
     return (
         <section id="main-section" className="main">
             <Helmet>
-                <title>Youlens | Vidéaste et pilote de drone | Montpellier</title>
-                <link rel="canonical" href="https://youlens.fr" />
+                <title>Guillaume Court | Vidéaste de mariage | Sud de la France</title>
+                <link rel="canonical" href="https://youlens.fr/projets" />
             </Helmet>
             <div className="main__container">
                 <video className="main__container__video" autoPlay muted playsInline loop src={videoSrc}></video>
