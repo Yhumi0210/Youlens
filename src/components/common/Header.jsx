@@ -95,7 +95,7 @@ export default function Header() {
                                   onClick={() => handleNavigation('contact')}>
                                 contact
                             </Link>
-                            <a href="https://www.instagram.com/youlens__?igsh=NXR6Y3F4ZjJyYjdi"
+                            <a href="https://www.instagram.com/guillaumecourt.weddingfilms?igsh=NjloYWx0cTZuMHky"
                                target="_blank" rel="noreferrer noopener">
                                 <img className='insta' src={insta} alt='logo Instagram'/>
                             </a>
@@ -113,7 +113,7 @@ export default function Header() {
                             <Link to="/projets" className="nav__wedding__page" onClick={() => setIsMenuOpen(false)}>
                                 autres projets
                             </Link>
-                            <a href="https://www.instagram.com/youlens__?igsh=NXR6Y3F4ZjJyYjdi"
+                            <a href="https://www.instagram.com/guillaumecourt.weddingfilms?igsh=NjloYWx0cTZuMHky"
                                target="_blank" rel="noreferrer noopener">
                                 <img className='insta' src={insta} alt='logo Instagram'/>
                             </a>

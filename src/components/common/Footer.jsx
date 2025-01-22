@@ -49,12 +49,26 @@ function Footer() {
                 </section>
                 <section className="footer__info__social">
                     <div className="footer__info__social__link">
-                        <a className="footer__info__social__link__insta" href="https://www.instagram.com/youlens__?igsh=NXR6Y3F4ZjJyYjdi" target="_blank" rel="noreferrer noopener">Instagram</a>
-                        {/*<a className="footer__info__social__link__behance" href="https://www.instagram.com/guillaumecourt_?igsh=bWh6NzR4ZjFvdjI2">Behance</a>*/}
+                        {location.pathname === '/' ? (
+                            <a className="footer__info__social__link__insta"
+                               href="https://www.instagram.com/guillaumecourt.weddingfilms"
+                               target="_blank"
+                               rel="noreferrer noopener">
+                                Instagram
+                            </a>
+                        ) : (
+                            <a className="footer__info__social__link__insta"
+                               href="https://www.instagram.com/youlens__?igsh=NXR6Y3F4ZjJyYjdi"
+                               target="_blank"
+                               rel="noreferrer noopener">
+                                Instagram
+                            </a>
+                        )}
+
                     </div>
                 </section>
                 <p className="footer__info__rights">
-                    <RouterLink to="/mentions-legales" className="footer__info__rights__a" onClick={scrollToTop}>Mentions Légales</RouterLink>
+                <RouterLink to="/mentions-legales" className="footer__info__rights__a" onClick={scrollToTop}>Mentions Légales</RouterLink>
                     <br />© 2024 Youlens. All Rights Reserved.
                 </p>
             </section>
